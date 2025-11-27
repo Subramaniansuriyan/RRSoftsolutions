@@ -1,0 +1,8 @@
+# robots.txt for RR soft solutions
+
+User-agent: *
+Allow: /
+
+# Sitemap location
+Sitemap: https://www.rrsoftwsolutions.com/sitemap.xml
+
