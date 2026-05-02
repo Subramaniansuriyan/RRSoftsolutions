@@ -40,7 +40,7 @@ export default function AboutPage() {
               <p>
                 RR soft solutions is a leading technology services company dedicated to 
                 empowering businesses through innovative software solutions and strategic IT consulting. 
-                With a global presence spanning India, USA, and the Middle East, we bring together 
+                Based in Houston, Texas, we bring together 
                 talented professionals who are passionate about solving complex business challenges.
               </p>
               <p>

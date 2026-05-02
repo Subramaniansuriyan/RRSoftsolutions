@@ -5,7 +5,7 @@ import { Mail, Globe, Phone, MapPin } from 'lucide-react';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Get in touch with RR soft solutions. We are available across India, USA, and Middle East. Contact us for consultations and quotes.',
+    'Get in touch with RR soft solutions. Based in Houston, TX — contact us for consultations and quotes.',
 };
 
 export default function ContactPage() {
@@ -13,35 +13,28 @@ export default function ContactPage() {
     {
       icon: <Mail size={24} />,
       label: 'Email',
-      value: 'rahul@rrsoftsolutions.com',
-      link: 'mailto:rahul@rrsoftsolutions.com',
+      value: 'surya@rrsoftsolutions.net',
+      link: 'mailto:surya@rrsoftsolutions.net',
     },
     {
       icon: <Globe size={24} />,
       label: 'Website',
-      value: 'www.rrsoftwsolutions.com',
-      link: 'https://www.rrsoftwsolutions.com',
+      value: 'www.rrsoftsolutions.net',
+      link: 'https://www.rrsoftsolutions.net',
     },
     { 
       icon: <Phone size={24} />,
       label: 'Phone',
-      value: '+1 (470) 021-30571',
-      link: 'tel:+1(470)021-30571',
+      value: '+1 (470) 213-0571',
+      link: 'tel:+14702130571',
     },
   ];
 
   const locations = [
     {
-      region: 'India',
-      description: 'Our primary development center and headquarters',
-    },
-    {
-      region: 'USA',
-      description: 'Serving clients across North America',
-    },
-    {
-      region: 'Middle East',
-      description: 'Supporting businesses in the Gulf region',
+      region: 'USA — Houston, TX',
+      description:
+        '17350 State Hwy 249, Ste 220, Houston, TX 77064',
     },
   ];
 
@@ -130,7 +123,7 @@ export default function ContactPage() {
           </p>
           <div className="flex flex-col sm:flex-row gap-4 justify-center">
             <a
-              href="mailto:rahul@rrsoftsolutions.com"
+              href="mailto:surya@rrsoftsolutions.net"
               className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-200"
             >
               Schedule a Consultation

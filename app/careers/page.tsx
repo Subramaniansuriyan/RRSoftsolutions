@@ -166,7 +166,7 @@ export default function CareersPage() {
               Get in Touch
             </Link>
             <a
-              href="mailto:rahul@rrsoftsolutions.com?subject=Career Opportunity"
+              href="mailto:surya@rrsoftsolutions.net?subject=Career Opportunity"
               className="inline-block bg-transparent border-2 border-white text-white px-8 py-3 rounded-lg font-semibold hover:bg-white hover:text-indigo-600 transition-colors duration-200"
             >
               Send Your Resume

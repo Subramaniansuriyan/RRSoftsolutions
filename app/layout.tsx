@@ -10,7 +10,7 @@ const inter = Inter({
 });
 
 export const metadata: Metadata = {
-  metadataBase: new URL("https://www.rrsoftwsolutions.com"),
+  metadataBase: new URL("https://www.rrsoftsolutions.net"),
   title: {
     default: "RR soft solutions - Empowering Businesses Through Technology",
     template: "%s | RR soft solutions",
@@ -31,7 +31,7 @@ export const metadata: Metadata = {
   openGraph: {
     type: "website",
     locale: "en_US",
-    url: "https://www.rrsoftwsolutions.com",
+    url: "https://www.rrsoftsolutions.net",
     siteName: "RR soft solutions",
     title: "RR soft solutions - Empowering Businesses Through Technology",
     description:

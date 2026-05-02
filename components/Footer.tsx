@@ -89,26 +89,26 @@ export default function Footer() {
             <ul className="space-y-3">
               <li className="flex items-center text-gray-400">
                 <Mail size={16} className="mr-2" />
-                <a href="mailto:rahul@rrsoftsolutions.com" className="hover:text-indigo-400">
-                  rahul@rrsoftsolutions.com
+                <a href="mailto:surya@rrsoftsolutions.net" className="hover:text-indigo-400">
+                  surya@rrsoftsolutions.net
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
                 <Globe size={16} className="mr-2" />
-                <a href="https://www.rrsoftwsolutions.com" className="hover:text-indigo-400">
-                  www.rrsoftwsolutions.com
+                <a href="https://www.rrsoftsolutions.net" className="hover:text-indigo-400">
+                  www.rrsoftsolutions.net
                 </a>
               </li>
               <li className="flex items-center text-gray-400">
                 <Phone size={16} className="mr-2" />
-                <a href="tel:+919176673736" className="hover:text-indigo-400">
-                  +1 (470) 021-30571
+                <a href="tel:+14702130571" className="hover:text-indigo-400">
+                  +1 (470) 213-0571
                 </a>
               </li>
             </ul>
             <div className="mt-4">
               <p className="text-gray-400 text-sm">
-                <strong>Offices:</strong> India, USA, Middle East
+                <strong>Office:</strong> 17350 State Hwy 249, Ste 220, Houston, TX 77064
               </p>
             </div>
           </div>

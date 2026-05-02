@@ -3,7 +3,7 @@ import { MetadataRoute } from 'next';
 export const dynamic = 'force-static';
 
 export default function sitemap(): MetadataRoute.Sitemap {
-  const baseUrl = 'https://www.rrsoftwsolutions.com';
+  const baseUrl = 'https://www.rrsoftsolutions.net';
   const currentDate = new Date();
 
   return [
