@@ -10,15 +10,14 @@ interface ServiceCardProps {
 
 export default function ServiceCard({ icon, title, description, benefit }: ServiceCardProps) {
   return (
-    <div className="bg-white p-8 rounded-lg shadow-md hover:shadow-xl transition-shadow duration-300 border border-gray-100">
-      <div className="text-indigo-600 mb-4">{icon}</div>
-      <h3 className="text-2xl font-bold text-gray-900 mb-4">{title}</h3>
-      <p className="text-gray-600 mb-4">{description}</p>
-      <div className="flex items-start text-green-600">
-        <CheckCircle size={20} className="mr-2 flex-shrink-0 mt-1" />
-        <p className="font-semibold text-gray-700">{benefit}</p>
+    <div className="bg-white p-8 border border-navy-200 hover:border-navy-500 transition-colors duration-200">
+      <div className="text-navy-800 mb-4">{icon}</div>
+      <h3 className="font-display text-2xl font-bold text-navy-900 mb-4">{title}</h3>
+      <p className="text-navy-500 mb-5 leading-relaxed">{description}</p>
+      <div className="flex items-start border-t border-navy-100 pt-4">
+        <CheckCircle size={20} className="mr-2 flex-shrink-0 mt-0.5 text-navy-700" />
+        <p className="font-semibold text-navy-800">{benefit}</p>
       </div>
     </div>
   );
 }
-

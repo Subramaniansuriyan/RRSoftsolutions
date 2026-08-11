@@ -3,16 +3,21 @@
 import { useState } from 'react';
 import { Send } from 'lucide-react';
 
+const fieldClass =
+  'w-full px-4 py-3 border outline-none transition-colors focus:ring-2 focus:ring-navy-600 focus:border-navy-600 bg-white text-navy-900';
+
 export default function ContactForm() {
   const [formData, setFormData] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
   const [errors, setErrors] = useState({
     name: '',
     email: '',
+    phone: '',
     message: '',
   });
 
@@ -28,6 +33,7 @@ export default function ContactForm() {
     const newErrors = {
       name: '',
       email: '',
+      phone: '',
       message: '',
     };
 
@@ -49,6 +55,11 @@ export default function ContactForm() {
       isValid = false;
     }
 
+    if (formData.phone.trim() && formData.phone.trim().length < 7) {
+      newErrors.phone = 'Please enter a valid phone number';
+      isValid = false;
+    }
+
     if (!formData.message.trim()) {
       newErrors.message = 'Message is required';
       isValid = false;
@@ -67,7 +78,6 @@ export default function ContactForm() {
       ...prev,
       [name]: value,
     }));
-    // Clear error when user starts typing
     if (errors[name as keyof typeof errors]) {
       setErrors((prev) => ({
         ...prev,
@@ -86,19 +96,17 @@ export default function ContactForm() {
 
     setIsSubmitting(true);
 
-    // Simulate form submission (replace with actual API call)
     setTimeout(() => {
       setSubmitMessage('Thank you for your message! We will get back to you soon.');
-      setFormData({ name: '', email: '', message: '' });
+      setFormData({ name: '', email: '', phone: '', message: '' });
       setIsSubmitting(false);
     }, 1000);
   };
 
   return (
-    <form onSubmit={handleSubmit} className="space-y-6">
-      {/* Name Field */}
+    <form onSubmit={handleSubmit} className="space-y-6 border border-navy-200 bg-white p-6 sm:p-8">
       <div>
-        <label htmlFor="name" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="name" className="block text-sm font-medium text-navy-700 mb-2">
           Name *
         </label>
         <input
@@ -107,17 +115,14 @@ export default function ContactForm() {
           name="name"
           value={formData.name}
           onChange={handleChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors ${
-            errors.name ? 'border-red-500' : 'border-gray-300'
-          }`}
+          className={`${fieldClass} ${errors.name ? 'border-red-500' : 'border-navy-200'}`}
           placeholder="Your full name"
         />
         {errors.name && <p className="mt-1 text-sm text-red-600">{errors.name}</p>}
       </div>
 
-      {/* Email Field */}
       <div>
-        <label htmlFor="email" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="email" className="block text-sm font-medium text-navy-700 mb-2">
           Email *
         </label>
         <input
@@ -126,17 +131,30 @@ export default function ContactForm() {
           name="email"
           value={formData.email}
           onChange={handleChange}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors ${
-            errors.email ? 'border-red-500' : 'border-gray-300'
-          }`}
+          className={`${fieldClass} ${errors.email ? 'border-red-500' : 'border-navy-200'}`}
           placeholder="your.email@example.com"
         />
         {errors.email && <p className="mt-1 text-sm text-red-600">{errors.email}</p>}
       </div>
 
-      {/* Message Field */}
       <div>
-        <label htmlFor="message" className="block text-sm font-medium text-gray-700 mb-2">
+        <label htmlFor="phone" className="block text-sm font-medium text-navy-700 mb-2">
+          Phone
+        </label>
+        <input
+          type="tel"
+          id="phone"
+          name="phone"
+          value={formData.phone}
+          onChange={handleChange}
+          className={`${fieldClass} ${errors.phone ? 'border-red-500' : 'border-navy-200'}`}
+          placeholder="+1 (555) 000-0000"
+        />
+        {errors.phone && <p className="mt-1 text-sm text-red-600">{errors.phone}</p>}
+      </div>
+
+      <div>
+        <label htmlFor="message" className="block text-sm font-medium text-navy-700 mb-2">
           Message *
         </label>
         <textarea
@@ -145,19 +163,18 @@ export default function ContactForm() {
           value={formData.message}
           onChange={handleChange}
           rows={6}
-          className={`w-full px-4 py-3 border rounded-lg focus:ring-2 focus:ring-indigo-500 focus:border-indigo-500 outline-none transition-colors resize-none ${
-            errors.message ? 'border-red-500' : 'border-gray-300'
+          className={`${fieldClass} resize-none ${
+            errors.message ? 'border-red-500' : 'border-navy-200'
           }`}
-          placeholder="Tell us about your project or inquiry..."
+          placeholder="Tell us about your project, hiring need, or inquiry..."
         />
         {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
       </div>
 
-      {/* Submit Button */}
       <button
         type="submit"
         disabled={isSubmitting}
-        className={`w-full bg-indigo-600 text-white py-3 px-6 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-200 flex items-center justify-center ${
+        className={`w-full bg-navy-800 text-white py-3.5 px-6 font-semibold tracking-wide hover:bg-navy-900 transition-colors duration-200 flex items-center justify-center ${
           isSubmitting ? 'opacity-50 cursor-not-allowed' : ''
         }`}
       >
@@ -165,19 +182,17 @@ export default function ContactForm() {
           'Sending...'
         ) : (
           <>
-            Send Message
-            <Send className="ml-2" size={20} />
+            Send message
+            <Send className="ml-2" size={18} />
           </>
         )}
       </button>
 
-      {/* Success Message */}
       {submitMessage && (
-        <div className="bg-green-50 border border-green-200 text-green-700 px-4 py-3 rounded-lg">
+        <div className="bg-navy-50 border border-navy-200 text-navy-800 px-4 py-3 text-sm">
           {submitMessage}
         </div>
       )}
     </form>
   );
 }
-

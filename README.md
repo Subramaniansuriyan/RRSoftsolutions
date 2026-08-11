@@ -195,4 +195,4 @@ Copyright © 2025 RR soft solutions. All rights reserved.
 
 ## Support
 
-For questions or support, contact: rahul@rrsoftsolutions.com
+For questions or support, contact: surya@rrsoftsolutions.net

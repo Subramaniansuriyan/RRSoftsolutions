@@ -18,40 +18,43 @@ export default function Header() {
   ];
 
   return (
-    <header className="bg-white shadow-md fixed w-full top-0 z-50">
+    <header className="bg-white/95 backdrop-blur-sm border-b border-navy-100 fixed w-full top-0 z-50">
       <nav className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
         <div className="flex justify-between items-center h-16">
-          {/* Logo */}
-          <Link href="/" className="flex items-center space-x-3">
+          <Link href="/" className="flex items-center gap-3 min-w-0">
             <Image
-              src="/logo_new.png"
-              alt="RR soft solutions"
-              width={60}
-              height={60}
-              className="object-contain"
+              src="/logo.png"
+              alt="RR Software Solutions"
+              width={48}
+              height={48}
+              className="object-contain h-11 w-11"
               priority
             />
-            {/* <span className="text-2xl font-bold text-indigo-600">
-              RR soft solutions
-            </span> */}
+            <span className="hidden sm:block font-display text-sm font-bold tracking-wide text-navy-800 truncate">
+              RR Software Solutions
+            </span>
           </Link>
 
-          {/* Desktop Navigation */}
-          <div className="hidden md:flex space-x-8">
+          <div className="hidden md:flex items-center gap-7">
             {navLinks.map((link) => (
               <Link
                 key={link.href}
                 href={link.href}
-                className="text-gray-700 hover:text-indigo-600 transition-colors duration-200 font-medium"
+                className="text-navy-600 hover:text-navy-900 transition-colors duration-200 text-sm font-medium"
               >
                 {link.label}
               </Link>
             ))}
+            <Link
+              href="/contact"
+              className="bg-navy-800 text-white px-4 py-2 text-sm font-semibold tracking-wide hover:bg-navy-900 transition-colors duration-200"
+            >
+              Hire talent
+            </Link>
           </div>
 
-          {/* Mobile Menu Button */}
           <button
-            className="md:hidden text-gray-700 hover:text-indigo-600"
+            className="md:hidden text-navy-800 hover:text-navy-600"
             onClick={() => setIsMenuOpen(!isMenuOpen)}
             aria-label="Toggle menu"
           >
@@ -59,20 +62,26 @@ export default function Header() {
           </button>
         </div>
 
-        {/* Mobile Navigation */}
         {isMenuOpen && (
-          <div className="md:hidden pb-4">
-            <div className="flex flex-col space-y-3">
+          <div className="md:hidden pb-4 border-t border-navy-100 mt-1 pt-3">
+            <div className="flex flex-col gap-1">
               {navLinks.map((link) => (
                 <Link
                   key={link.href}
                   href={link.href}
-                  className="text-gray-700 hover:text-indigo-600 transition-colors duration-200 font-medium py-2"
+                  className="text-navy-700 hover:text-navy-900 transition-colors duration-200 font-medium py-2"
                   onClick={() => setIsMenuOpen(false)}
                 >
                   {link.label}
                 </Link>
               ))}
+              <Link
+                href="/contact"
+                className="bg-navy-800 text-white px-4 py-2.5 font-semibold tracking-wide hover:bg-navy-900 transition-colors duration-200 text-center mt-2"
+                onClick={() => setIsMenuOpen(false)}
+              >
+                Hire talent
+              </Link>
             </div>
           </div>
         )}
@@ -80,4 +89,3 @@ export default function Header() {
     </header>
   );
 }
-

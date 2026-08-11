@@ -6,122 +6,119 @@ export default function Footer() {
   const currentYear = new Date().getFullYear();
 
   return (
-    <footer className="bg-gray-900 text-white">
-      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-12">
-        <div className="grid grid-cols-1 md:grid-cols-3 gap-8">
-          {/* Company Info */}
+    <footer className="bg-navy-900 text-white">
+      <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-14">
+        <div className="grid grid-cols-1 md:grid-cols-3 gap-10">
           <div>
-            <Link href="/" className="flex items-center space-x-3 mb-4">
+            <Link href="/" className="flex items-center gap-3 mb-5">
               <Image
-                src="/logo_new.png"
-                alt="RR soft solutions"
-                width={60}
-                height={60}
-                className="object-contain brightness-0 invert"
+                src="/logo.png"
+                alt="RR Software Solutions"
+                width={56}
+                height={56}
+                className="object-contain rounded-sm bg-white p-1"
               />
-              <h3 className="text-xl font-bold text-indigo-400">
-                soft solutions
-              </h3>
+              <div>
+                <h3 className="font-display text-base font-bold tracking-wide text-white">
+                  RR Software Solutions
+                </h3>
+                <p className="text-xs tracking-[0.16em] uppercase text-navy-300 mt-0.5">
+                  Build to scale
+                </p>
+              </div>
             </Link>
-            <p className="text-gray-400 mb-4">
-              Empowering businesses through technology and people. Turning ideas into digital reality.
+            <p className="text-navy-300 mb-5 text-sm leading-relaxed">
+              Houston-based technology partner for software, cloud, healthcare revenue operations,
+              and IT talent.
             </p>
-            <div className="flex space-x-4">
+            <div className="flex gap-4">
               <a
                 href="#"
-                className="text-gray-400 hover:text-indigo-400 transition-colors"
+                className="text-navy-300 hover:text-white transition-colors"
                 aria-label="LinkedIn"
               >
-                <Linkedin size={20} />
+                <Linkedin size={18} />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-indigo-400 transition-colors"
+                className="text-navy-300 hover:text-white transition-colors"
                 aria-label="Twitter"
               >
-                <Twitter size={20} />
+                <Twitter size={18} />
               </a>
               <a
                 href="#"
-                className="text-gray-400 hover:text-indigo-400 transition-colors"
+                className="text-navy-300 hover:text-white transition-colors"
                 aria-label="Facebook"
               >
-                <Facebook size={20} />
+                <Facebook size={18} />
               </a>
             </div>
           </div>
 
-          {/* Quick Links */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Quick Links</h4>
-            <ul className="space-y-2">
-              <li>
-                <Link href="/" className="text-gray-400 hover:text-indigo-400 transition-colors">
-                  Home
-                </Link>
-              </li>
-              <li>
-                <Link href="/about" className="text-gray-400 hover:text-indigo-400 transition-colors">
-                  About
-                </Link>
-              </li>
-              <li>
-                <Link href="/services" className="text-gray-400 hover:text-indigo-400 transition-colors">
-                  Services
-                </Link>
-              </li>
-              <li>
-                <Link href="/careers" className="text-gray-400 hover:text-indigo-400 transition-colors">
-                  Careers
-                </Link>
-              </li>
-              <li>
-                <Link href="/contact" className="text-gray-400 hover:text-indigo-400 transition-colors">
-                  Contact
-                </Link>
-              </li>
+            <h4 className="font-display text-sm font-bold tracking-wide mb-4">Quick Links</h4>
+            <ul className="space-y-2 text-sm">
+              {[
+                ['/', 'Home'],
+                ['/about', 'About'],
+                ['/services', 'Services'],
+                ['/industries', 'Industries'],
+                ['/careers', 'Careers'],
+                ['/contact', 'Contact'],
+              ].map(([href, label]) => (
+                <li key={href}>
+                  <Link
+                    href={href}
+                    className="text-navy-300 hover:text-white transition-colors"
+                  >
+                    {label}
+                  </Link>
+                </li>
+              ))}
             </ul>
           </div>
 
-          {/* Contact Info */}
           <div>
-            <h4 className="text-lg font-semibold mb-4">Contact Us</h4>
-            <ul className="space-y-3">
-              <li className="flex items-center text-gray-400">
-                <Mail size={16} className="mr-2" />
-                <a href="mailto:surya@rrsoftsolutions.net" className="hover:text-indigo-400">
+            <h4 className="font-display text-sm font-bold tracking-wide mb-4">Contact Us</h4>
+            <ul className="space-y-3 text-sm">
+              <li className="flex items-center text-navy-300">
+                <Mail size={16} className="mr-2 shrink-0" />
+                <a
+                  href="mailto:surya@rrsoftsolutions.net"
+                  className="hover:text-white transition-colors"
+                >
                   surya@rrsoftsolutions.net
                 </a>
               </li>
-              <li className="flex items-center text-gray-400">
-                <Globe size={16} className="mr-2" />
-                <a href="https://www.rrsoftsolutions.net" className="hover:text-indigo-400">
+              <li className="flex items-center text-navy-300">
+                <Globe size={16} className="mr-2 shrink-0" />
+                <a
+                  href="https://www.rrsoftsolutions.net"
+                  className="hover:text-white transition-colors"
+                >
                   www.rrsoftsolutions.net
                 </a>
               </li>
-              <li className="flex items-center text-gray-400">
-                <Phone size={16} className="mr-2" />
-                <a href="tel:+14702130571" className="hover:text-indigo-400">
+              <li className="flex items-center text-navy-300">
+                <Phone size={16} className="mr-2 shrink-0" />
+                <a href="tel:+14702130571" className="hover:text-white transition-colors">
                   +1 (470) 213-0571
                 </a>
               </li>
             </ul>
-            <div className="mt-4">
-              <p className="text-gray-400 text-sm">
-                <strong>Office:</strong> 17350 State Hwy 249, Ste 220, Houston, TX 77064
-              </p>
-            </div>
+            <p className="text-navy-300 text-sm mt-5 leading-relaxed">
+              17350 State Hwy 249, Ste 220, Houston, TX 77064
+            </p>
           </div>
         </div>
 
-        {/* Bottom Bar */}
-        <div className="border-t border-gray-800 mt-8 pt-8 text-center">
-          <p className="text-gray-400">
-            &copy; {currentYear} RR Soft Solutions. All rights reserved.
+        <div className="border-t border-white/10 mt-12 pt-8 text-center">
+          <p className="text-navy-400 text-sm">
+            &copy; {currentYear} RR Software Solutions. All rights reserved.
           </p>
         </div>
       </div>
     </footer>
   );
 }
-

@@ -1,22 +1,29 @@
 import type { Metadata } from "next";
-import { Inter } from "next/font/google";
+import { Libre_Baskerville, Source_Sans_3 } from "next/font/google";
 import "./globals.css";
 import Header from "@/components/Header";
 import Footer from "@/components/Footer";
 
-const inter = Inter({
+const display = Libre_Baskerville({
   subsets: ["latin"],
-  variable: "--font-geist-sans",
+  weight: ["400", "700"],
+  variable: "--font-display",
+});
+
+const body = Source_Sans_3({
+  subsets: ["latin"],
+  weight: ["400", "500", "600", "700"],
+  variable: "--font-body",
 });
 
 export const metadata: Metadata = {
   metadataBase: new URL("https://www.rrsoftsolutions.net"),
   title: {
-    default: "RR soft solutions - Empowering Businesses Through Technology",
-    template: "%s | RR soft solutions",
+    default: "RR Software Solutions — Build to Scale",
+    template: "%s | RR Software Solutions",
   },
   description:
-    "RR soft solutions provides custom software development, IT consulting, cloud management, RCM, and staffing services. Turning ideas into digital reality.",
+    "Houston technology partner for custom software, IT consulting, cloud, healthcare RCM, and IT staffing. Build to scale.",
   keywords: [
     "software development",
     "IT consulting",
@@ -25,32 +32,32 @@ export const metadata: Metadata = {
     "IT staffing",
     "digital transformation",
   ],
-  authors: [{ name: "RR soft solutions" }],
-  creator: "RR soft solutions",
-  publisher: "RR soft solutions",
+  authors: [{ name: "RR Software Solutions" }],
+  creator: "RR Software Solutions",
+  publisher: "RR Software Solutions",
   openGraph: {
     type: "website",
     locale: "en_US",
     url: "https://www.rrsoftsolutions.net",
-    siteName: "RR soft solutions",
-    title: "RR soft solutions - Empowering Businesses Through Technology",
+    siteName: "RR Software Solutions",
+    title: "RR Software Solutions — Build to Scale",
     description:
-      "Combining human creativity with cutting-edge technology to help businesses grow.",
+      "Software, cloud, healthcare revenue operations, and IT talent—built to scale from Houston.",
     images: [
       {
-        url: "/og-image.jpg",
-        width: 1200,
-        height: 630,
-        alt: "RR soft solutions",
+        url: "/logo.png",
+        width: 1024,
+        height: 1024,
+        alt: "RR Software Solutions",
       },
     ],
   },
   twitter: {
     card: "summary_large_image",
-    title: "RR soft solutions - Empowering Businesses Through Technology",
+    title: "RR Software Solutions — Build to Scale",
     description:
-      "Combining human creativity with cutting-edge technology to help businesses grow.",
-    images: ["/og-image.jpg"],
+      "Software, cloud, healthcare revenue operations, and IT talent—built to scale from Houston.",
+    images: ["/logo.png"],
   },
   robots: {
     index: true,
@@ -72,7 +79,7 @@ export default function RootLayout({
 }>) {
   return (
     <html lang="en">
-      <body className={`${inter.variable} antialiased`}>
+      <body className={`${display.variable} ${body.variable} antialiased`}>
         <Header />
         <main className="pt-16">{children}</main>
         <Footer />

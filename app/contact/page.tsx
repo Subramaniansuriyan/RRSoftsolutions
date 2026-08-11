@@ -1,143 +1,137 @@
 import { Metadata } from 'next';
-import ContactForm from '@/components/ContactForm';
+import Link from 'next/link';
 import { Mail, Globe, Phone, MapPin } from 'lucide-react';
+import PageHero from '@/components/PageHero';
+import PageCta from '@/components/PageCta';
+import ContactForm from '@/components/ContactForm';
 
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Get in touch with RR soft solutions. Based in Houston, TX — contact us for consultations and quotes.',
+    'Get in touch with RR Software Solutions. Based in Houston, TX — contact us for consultations, staffing, and project quotes.',
 };
 
+const contactInfo = [
+  {
+    icon: Mail,
+    label: 'Email',
+    value: 'surya@rrsoftsolutions.net',
+    link: 'mailto:surya@rrsoftsolutions.net',
+    hint: 'Best for project briefs and resumes',
+  },
+  {
+    icon: Phone,
+    label: 'Phone',
+    value: '+1 (470) 213-0571',
+    link: 'tel:+14702130571',
+    hint: 'Weekdays, business hours',
+  },
+  {
+    icon: Globe,
+    label: 'Website',
+    value: 'www.rrsoftsolutions.net',
+    link: 'https://www.rrsoftsolutions.net',
+    hint: 'Explore services and industries',
+  },
+];
+
 export default function ContactPage() {
-  const contactInfo = [
-    {
-      icon: <Mail size={24} />,
-      label: 'Email',
-      value: 'surya@rrsoftsolutions.net',
-      link: 'mailto:surya@rrsoftsolutions.net',
-    },
-    {
-      icon: <Globe size={24} />,
-      label: 'Website',
-      value: 'www.rrsoftsolutions.net',
-      link: 'https://www.rrsoftsolutions.net',
-    },
-    { 
-      icon: <Phone size={24} />,
-      label: 'Phone',
-      value: '+1 (470) 213-0571',
-      link: 'tel:+14702130571',
-    },
-  ];
-
-  const locations = [
-    {
-      region: 'USA — Houston, TX',
-      description:
-        '17350 State Hwy 249, Ste 220, Houston, TX 77064',
-    },
-  ];
-
   return (
-    <div>
-      {/* Hero Section */}
-      <section className="bg-gradient-to-r from-indigo-600 to-purple-600 text-white py-16 sm:py-20">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <h1 className="text-4xl sm:text-5xl font-bold mb-4">Contact Us</h1>
-          <p className="text-xl text-indigo-100 max-w-3xl">
-            Let's discuss how we can help transform your business with technology.
-          </p>
-        </div>
-      </section>
+    <div className="bg-white text-navy-900">
+      <PageHero
+        eyebrow="Contact"
+        title="Start a conversation"
+        description="Whether you need software delivery, cloud support, RCM help, or IT talent—reach our Houston team and we will respond within one business day."
+        primaryCta={{ href: 'mailto:surya@rrsoftsolutions.net', label: 'Email us' }}
+        secondaryCta={{ href: '/services', label: 'View services' }}
+      />
 
-      {/* Contact Section */}
-      <section className="py-16 sm:py-20 bg-white">
+      <section className="py-20 sm:py-28">
         <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8">
-          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12">
-            {/* Contact Form */}
+          <div className="grid grid-cols-1 lg:grid-cols-2 gap-12 lg:gap-16">
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Send Us a Message</h2>
-              <p className="text-gray-600 mb-8">
-                Fill out the form below and we'll get back to you within 24 hours.
+              <p className="text-xs tracking-[0.2em] uppercase text-navy-500 mb-3">Message</p>
+              <h2 className="font-display text-3xl font-bold text-navy-900 mb-4">
+                Send us a note
+              </h2>
+              <p className="text-navy-500 mb-8 leading-relaxed">
+                Share a bit about your project or hiring need. Validation runs live as you type;
+                required fields are marked with an asterisk.
               </p>
               <ContactForm />
             </div>
 
-            {/* Contact Information */}
             <div>
-              <h2 className="text-3xl font-bold text-gray-900 mb-6">Get in Touch</h2>
-              <p className="text-gray-600 mb-8">
-                Prefer to reach out directly? Use any of the contact methods below.
+              <p className="text-xs tracking-[0.2em] uppercase text-navy-500 mb-3">Direct</p>
+              <h2 className="font-display text-3xl font-bold text-navy-900 mb-4">
+                Get in touch
+              </h2>
+              <p className="text-navy-500 mb-8 leading-relaxed">
+                Prefer email or phone? Use the channels below—each opens your default app.
               </p>
 
-              {/* Contact Details */}
-              <div className="space-y-6 mb-12">
-                {contactInfo.map((info, index) => (
-                  <div key={index} className="flex items-start">
-                    <div className="text-indigo-600 mr-4">{info.icon}</div>
-                    <div>
-                      <p className="text-sm font-semibold text-gray-700 mb-1">{info.label}</p>
+              <ul className="border border-navy-200 divide-y divide-navy-100 mb-10">
+                {contactInfo.map((info) => {
+                  const Icon = info.icon;
+                  return (
+                    <li key={info.label}>
                       <a
                         href={info.link}
-                        className="text-gray-900 hover:text-indigo-600 transition-colors"
+                        className="flex items-start gap-4 p-5 sm:p-6 hover:bg-navy-50 transition-colors group"
                       >
-                        {info.value}
+                        <span className="text-navy-800 mt-0.5">
+                          <Icon size={22} aria-hidden />
+                        </span>
+                        <span>
+                          <span className="text-xs tracking-[0.16em] uppercase text-navy-500 block mb-1">
+                            {info.label}
+                          </span>
+                          <span className="font-semibold text-navy-900 group-hover:text-navy-700 transition-colors block">
+                            {info.value}
+                          </span>
+                          <span className="text-sm text-navy-500 mt-1 block">{info.hint}</span>
+                        </span>
                       </a>
-                    </div>
-                  </div>
-                ))}
-              </div>
+                    </li>
+                  );
+                })}
+              </ul>
 
-              {/* Office Locations */}
-              <div>
-                <h3 className="text-2xl font-bold text-gray-900 mb-4 flex items-center">
-                  <MapPin className="mr-2 text-indigo-600" size={24} />
-                  Our Locations
+              <div className="bg-navy-800 text-white p-6 sm:p-8">
+                <h3 className="font-display text-xl font-bold mb-3 flex items-center gap-2">
+                  <MapPin size={22} aria-hidden />
+                  Our office
                 </h3>
-                <div className="space-y-4">
-                  {locations.map((location, index) => (
-                    <div
-                      key={index}
-                      className="bg-gradient-to-br from-indigo-50 to-purple-50 p-4 rounded-lg border border-indigo-100"
-                    >
-                      <h4 className="font-semibold text-gray-900 mb-1">{location.region}</h4>
-                      <p className="text-sm text-gray-600">{location.description}</p>
-                    </div>
-                  ))}
-                </div>
+                <p className="text-xs tracking-[0.16em] uppercase text-white/60 mb-2">
+                  USA — Houston, TX
+                </p>
+                <p className="text-white/90 leading-relaxed">
+                  17350 State Hwy 249, Ste 220
+                  <br />
+                  Houston, TX 77064
+                </p>
+                <Link
+                  href="https://maps.google.com/?q=17350+State+Hwy+249+Ste+220+Houston+TX+77064"
+                  target="_blank"
+                  rel="noopener noreferrer"
+                  className="inline-flex mt-5 text-sm font-semibold text-white underline underline-offset-4 hover:text-navy-100"
+                >
+                  Open in maps
+                </Link>
               </div>
             </div>
           </div>
         </div>
       </section>
 
-      {/* CTA Section */}
-      <section className="py-16 sm:py-20 bg-gray-50">
-        <div className="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 text-center">
-          <h2 className="text-3xl sm:text-4xl font-bold text-gray-900 mb-4">
-            Ready to Start Your Project?
-          </h2>
-          <p className="text-lg text-gray-600 mb-8 max-w-2xl mx-auto">
-            Whether you need a custom software solution, IT consulting, or want to discuss 
-            staffing options, we're here to help.
-          </p>
-          <div className="flex flex-col sm:flex-row gap-4 justify-center">
-            <a
-              href="mailto:surya@rrsoftsolutions.net"
-              className="inline-block bg-indigo-600 text-white px-8 py-3 rounded-lg font-semibold hover:bg-indigo-700 transition-colors duration-200"
-            >
-              Schedule a Consultation
-            </a>
-            <a
-              href="/services"
-              className="inline-block bg-white text-indigo-600 border-2 border-indigo-600 px-8 py-3 rounded-lg font-semibold hover:bg-indigo-50 transition-colors duration-200"
-            >
-              View Our Services
-            </a>
-          </div>
-        </div>
-      </section>
+      <PageCta
+        eyebrow="Next step"
+        title="Ready to start?"
+        description="Schedule a consultation by email, or review our full service list before you reach out."
+        primaryCta={{ href: 'mailto:surya@rrsoftsolutions.net', label: 'Schedule a consultation' }}
+        secondaryCta={{ href: '/services', label: 'View our services' }}
+        variant="navy"
+      />
     </div>
   );
 }
-
