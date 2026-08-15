@@ -12,10 +12,11 @@ export default function Hero() {
           </p>
           <div className="h-px w-16 bg-navy-800 mb-8 home-rule" aria-hidden />
           <h1 className="font-display text-4xl sm:text-5xl lg:text-[3.35rem] leading-[1.12] text-navy-900 font-bold mb-6 home-animate-fade-up home-animate-delay-1">
-            Technology and talent, built to scale
+            IT talent and technology direction, built to scale
           </h1>
           <p className="text-lg sm:text-xl text-navy-500 leading-relaxed mb-10 home-animate-fade-up home-animate-delay-2">
-            Houston partner for software, cloud, healthcare revenue operations, and IT staffing.
+            Staffing, consulting, and recruitment outsourcing for U.S. companies that need
+            dependable delivery.
           </p>
           <div className="flex flex-col sm:flex-row gap-3 sm:gap-4 home-animate-fade-up home-animate-delay-3">
             <Link

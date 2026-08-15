@@ -7,7 +7,7 @@ import ProcessSteps from '@/components/ProcessSteps';
 export const metadata: Metadata = {
   title: 'Our Services',
   description:
-    'Custom software, IT consulting, cloud infrastructure, healthcare RCM, and IT staffing from RR Software Solutions in Houston.',
+    'IT staffing, IT consulting, and RPO for U.S. companies — offshore delivery teams, direct hire, contract-to-hire, and managed recruiting from RR Software Solutions.',
 };
 
 export default function ServicesPage() {
@@ -15,8 +15,8 @@ export default function ServicesPage() {
     <div className="bg-white text-navy-900">
       <PageHero
         eyebrow="Services"
-        title="Technology and talent that deliver"
-        description="Practical software, cloud, consulting, healthcare revenue operations, and staffing—for teams that need dependable delivery, not generic packages."
+        title="IT talent and technology direction, built to scale"
+        description="Staffing, consulting, and recruitment outsourcing for U.S. companies that need dependable delivery — not another vendor in the rotation."
         primaryCta={{ href: '/contact', label: 'Discuss your needs' }}
         secondaryCta={{ href: '/#estimator', label: 'Staffing estimator' }}
       />
@@ -29,7 +29,7 @@ export default function ServicesPage() {
               Explore our services
             </h2>
             <p className="text-lg text-navy-500 leading-relaxed">
-              Select a capability to read the full description, then browse the full list below.
+              Select IT Staffing, IT Consulting, or RPO to read the full offering.
             </p>
           </div>
           <ServicesDirectory />
@@ -44,7 +44,7 @@ export default function ServicesPage() {
               How engagements run
             </h2>
             <p className="text-lg text-navy-500 leading-relaxed">
-              Hover or select a step—product delivery and staffing follow the same clear path.
+              Hover or select a step — staffing, consulting, and RPO follow a clear path.
             </p>
           </div>
           <ProcessSteps />
@@ -54,9 +54,9 @@ export default function ServicesPage() {
       <PageCta
         eyebrow="Build to scale"
         title="Ready to get started?"
-        description="Tell us about your product backlog, cloud goals, revenue operations needs, or open roles—we will recommend a clear next step."
-        primaryCta={{ href: '/contact', label: 'Contact us today' }}
-        secondaryCta={{ href: '/industries', label: 'Industries we serve' }}
+        description="Tell us about open roles, hiring volume, or a technology roadmap — we will recommend a clear next step."
+        primaryCta={{ href: '/contact', label: 'Discuss your needs' }}
+        secondaryCta={{ href: '/#estimator', label: 'Try the estimator' }}
       />
     </div>
   );

@@ -26,7 +26,7 @@ const benefits = [
   {
     icon: Globe,
     title: 'Meaningful Clients',
-    description: 'Collaborate with U.S. teams on products, healthcare systems, and cloud platforms.',
+    description: 'Collaborate with U.S. hiring managers and IT leaders on staffing, consulting, and RPO work.',
   },
   {
     icon: Lightbulb,

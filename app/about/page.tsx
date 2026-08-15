@@ -9,7 +9,7 @@ import { industries } from '@/content/industries';
 export const metadata: Metadata = {
   title: 'About Us',
   description:
-    'Learn about RR Software Solutions — a Houston technology partner for software, cloud, healthcare RCM, and IT staffing.',
+    'Learn about RR Software Solutions — a Houston technology talent partner for IT staffing, consulting, and RPO serving U.S. companies.',
 };
 
 const pillars = [
@@ -36,7 +36,7 @@ export default function AboutPage() {
       <PageHero
         eyebrow="About"
         title="A Houston partner built to scale with you"
-        description="Engineering craft and careful talent matching so businesses can grow with confidence—software, cloud, healthcare revenue operations, and staffing."
+        description="IT staffing, consulting, and recruitment outsourcing for U.S. companies that need dependable delivery — not another vendor in the rotation."
         primaryCta={{ href: '/contact', label: 'Talk to us' }}
         secondaryCta={{ href: '/services', label: 'Our services' }}
       />
@@ -51,19 +51,18 @@ export default function AboutPage() {
           </div>
           <div className="max-w-3xl space-y-5 text-lg text-navy-500 leading-relaxed">
             <p>
-              RR Software Solutions is a technology services company focused on practical outcomes:
-              software that ships, cloud environments that stay stable, healthcare revenue processes
-              that protect collections, and staffing that fills real skill gaps.
+              RR Software Solutions is a technology talent partner focused on practical outcomes for
+              U.S. companies: screened IT professionals who are ready to start, technology roadmaps
+              you can execute, and recruiting capacity that flexes with hiring volume.
             </p>
             <p>
-              Based in Houston, Texas, we work with mid-market and growth-stage organizations that
-              need a partner who communicates plainly and follows through. Our people bring domain
-              familiarity alongside technical skill—especially in regulated and high-stakes delivery
-              contexts.
+              Based in Houston, Texas, we work with HR and talent leaders, IT directors, and hiring
+              managers who need a partner who communicates plainly and follows through — from
+              offshore extended teams to direct hire and managed RPO.
             </p>
             <p>
               Relationships matter here. Long-term clients stay because we listen, adjust when
-              priorities shift, and treat every engagement as a shared responsibility—not a ticket
+              priorities shift, and treat every engagement as a shared responsibility — not a ticket
               queue.
             </p>
           </div>

@@ -21,7 +21,8 @@ export default function Home() {
               What we do
             </h2>
             <p className="text-lg text-navy-500 leading-relaxed">
-              Expand a capability to see how we help—click any row to dig in.
+              Expand a capability to see how we help U.S. companies staff, advise, and outsource
+              recruiting.
             </p>
           </div>
           <ServicesExplorer />
@@ -103,10 +104,10 @@ export default function Home() {
               Build to scale
             </p>
             <h2 className="font-display text-3xl sm:text-4xl lg:text-5xl font-bold text-navy-900 mb-6 leading-tight">
-              Ready for the next system—or the next hire?
+              Ready for the next hire—or a clearer roadmap?
             </h2>
             <p className="text-lg text-navy-500 mb-10 leading-relaxed">
-              Tell us about your roadmap, delivery pressure, or open roles. We will recommend a
+              Tell us about open roles, hiring volume, or technology direction. We will recommend a
               clear next step.
             </p>
             <div className="flex flex-col sm:flex-row gap-3 sm:gap-4">

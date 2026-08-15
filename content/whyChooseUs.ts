@@ -1,10 +1,10 @@
 export const whyChooseUsIntro =
-  'Houston-rooted technology partner for software, cloud, healthcare revenue operations, and IT talent. We pair responsive communication with delivery discipline so projects and hires stay on track.';
+  'Houston-based technology talent partner for U.S. companies — IT staffing, consulting, and recruitment outsourcing. We pair responsive communication with delivery discipline so hires and roadmaps stay on track.';
 
 export const whyChooseUsPoints: string[] = [
-  'We respond quickly to calls and email so decisions do not stall while you wait on a vendor.',
-  'Clear engagement models for product builds, consulting, cloud support, and staffing—so expectations are aligned upfront.',
-  'Healthcare-aware delivery for RCM and regulated environments, not one-size-fits-all templates.',
-  'Practical recommendations after reviewing your systems, team, and constraints—not generic slideware.',
-  'A talent network spanning core engineering skills so we can staff specialized roles without long, open-ended searches.',
+  'Pre-vetted technical talent so your team interviews, not filters — reducing time-to-fill without lowering the bar.',
+  'Transparent, stated rate and fee structures with no hidden markups.',
+  'Flexible engagement models that scale up or down with your hiring plan.',
+  'Recommendations grounded in a review of your actual systems and team — not generic slideware.',
+  'A single point of accountability across offshore delivery teams, domestic placements, and managed recruiting.',
 ];

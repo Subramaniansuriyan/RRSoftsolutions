@@ -28,8 +28,8 @@ export default function Footer() {
               </div>
             </Link>
             <p className="text-navy-300 mb-5 text-sm leading-relaxed">
-              Houston-based technology partner for software, cloud, healthcare revenue operations,
-              and IT talent.
+              Houston-based technology talent partner — IT staffing, consulting, and recruitment
+              outsourcing for U.S. companies.
             </p>
             <div className="flex gap-4">
               <a

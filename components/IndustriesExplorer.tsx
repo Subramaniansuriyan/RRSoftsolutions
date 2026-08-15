@@ -70,12 +70,12 @@ export default function IndustriesExplorer() {
             </p>
             <ul className="space-y-3 text-navy-600 text-sm leading-relaxed">
               <li className="border-b border-navy-100 pb-3">
-                Domain-aware delivery—not a one-size-fits-all template.
+                Screened IT talent — not a one-size-fits-all recruiting template.
               </li>
               <li className="border-b border-navy-100 pb-3">
-                Engineering, consulting, or staffing models based on what you need next.
+                Staffing, consulting, or RPO based on what you need next.
               </li>
-              <li>Houston team partnership with clear communication and ownership.</li>
+              <li>Houston partnership with clear communication and a single point of contact.</li>
             </ul>
           </div>
         </div>

@@ -166,7 +166,7 @@ export default function ContactForm() {
           className={`${fieldClass} resize-none ${
             errors.message ? 'border-red-500' : 'border-navy-200'
           }`}
-          placeholder="Tell us about your project, hiring need, or inquiry..."
+          placeholder="Tell us about open roles, hiring volume, or a technology roadmap..."
         />
         {errors.message && <p className="mt-1 text-sm text-red-600">{errors.message}</p>}
       </div>

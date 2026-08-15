@@ -3,44 +3,36 @@
 import { useCallback, useEffect, useRef, useState } from 'react';
 import Image from 'next/image';
 import Link from 'next/link';
-import { Code, Cloud, LineChart, Users, DollarSign, ArrowUpRight } from 'lucide-react';
+import { LineChart, Users, UserSearch, ArrowUpRight } from 'lucide-react';
 
 const SCENES = [
   {
-    id: 'build',
-    label: 'Build',
-    title: 'Product engineering',
-    description: 'Web, mobile, and enterprise systems shaped around real workflows.',
-    href: '/services',
-    icon: Code,
-    image: '/hero-team.jpg',
-  },
-  {
-    id: 'scale',
-    label: 'Scale',
-    title: 'Cloud & operations',
-    description: 'Infrastructure that stays stable when traffic and teams grow.',
-    href: '/services',
-    icon: Cloud,
-    image: '/hero-workspace.jpg',
-  },
-  {
     id: 'staff',
     label: 'Staff',
-    title: 'IT talent on demand',
-    description: 'Screened engineers and specialists ready for delivery.',
-    href: '/contact',
+    title: 'IT Staffing',
+    description:
+      'Contract, contract-to-hire, and permanent technology talent — built around U.S. delivery.',
+    href: '/services#staffing',
     icon: Users,
     image: '/hero-team.jpg',
   },
   {
-    id: 'grow',
-    label: 'Grow',
-    title: 'Consulting & RCM',
-    description: 'Roadmaps and healthcare revenue support that move the numbers.',
-    href: '/services',
+    id: 'consult',
+    label: 'Consult',
+    title: 'IT Consulting',
+    description: 'Clear technology direction for modernization and growth.',
+    href: '/services#consulting',
     icon: LineChart,
     image: '/hero-workspace.jpg',
+  },
+  {
+    id: 'rpo',
+    label: 'RPO',
+    title: 'Recruitment outsourcing',
+    description: 'Your hiring engine, managed end-to-end.',
+    href: '/services#rpo',
+    icon: UserSearch,
+    image: '/hero-team.jpg',
   },
 ] as const;
 
@@ -90,7 +82,6 @@ export default function HeroVisual() {
       <div className="absolute inset-0 -mx-4 sm:-mx-6 lg:mx-0 lg:inset-y-[-12%] lg:left-0 lg:right-[-50vw] bg-navy-800" aria-hidden />
 
       <div className="relative aspect-[4/5] sm:aspect-[5/4] lg:aspect-[4/5] w-full max-h-[32rem] lg:max-h-none overflow-hidden">
-        {/* Parallax image stack */}
         {SCENES.map((s, i) => (
           <div
             key={s.id}
@@ -118,7 +109,6 @@ export default function HeroVisual() {
           </div>
         ))}
 
-        {/* Navy overlays for brand palette */}
         <div
           className="absolute inset-0 bg-gradient-to-t from-navy-900 via-navy-900/55 to-navy-800/25"
           aria-hidden
@@ -131,7 +121,6 @@ export default function HeroVisual() {
           aria-hidden
         />
 
-        {/* Interactive scene content */}
         <div className="absolute inset-0 flex flex-col justify-between p-5 sm:p-7 lg:p-8">
           <div className="flex flex-wrap gap-2">
             {SCENES.map((s, i) => {
@@ -182,12 +171,11 @@ export default function HeroVisual() {
               href={scene.href}
               className="inline-flex items-center text-sm font-semibold text-navy-800 hover:text-navy-600 transition-colors"
             >
-              Explore
+              Learn more
               <ArrowUpRight className="ml-1" size={16} aria-hidden />
             </Link>
           </div>
 
-          {/* Progress dots */}
           <div className="flex gap-2" role="tablist" aria-label="Hero scenes">
             {SCENES.map((s, i) => (
               <button
@@ -205,9 +193,7 @@ export default function HeroVisual() {
           </div>
         </div>
 
-        {/* Corner brand chip */}
         <div className="absolute top-5 right-5 sm:top-7 sm:right-7 hidden sm:flex items-center gap-2 bg-navy-900/70 text-white text-[0.65rem] tracking-[0.16em] uppercase px-3 py-1.5 border border-white/15">
-          <DollarSign size={12} aria-hidden />
           Build to scale
         </div>
       </div>

@@ -20,11 +20,11 @@ export const industries: Industry[] = [
     id: 'healthcare',
     icon: 'heart',
     shortTitle: 'Healthcare',
-    title: 'Healthcare & RCM',
+    title: 'Healthcare',
     description:
-      'We understand the unique challenges of healthcare organizations, from HIPAA awareness to revenue cycle optimization. Our work helps providers improve operations while protecting collections.',
+      'Healthcare organizations need IT talent who understand compliance, clinical systems, and delivery pressure. We staff and recruit for roles that keep operations moving.',
     solution:
-      'RCM support, EMR/EHR integration, patient portals, and healthcare analytics platforms.',
+      'IT staffing, contract-to-hire, and RPO for healthcare IT, EMR/EHR, and operations technology teams.',
   },
   {
     id: 'banking',
@@ -32,9 +32,9 @@ export const industries: Industry[] = [
     shortTitle: 'Banking',
     title: 'Banking & Financial Services',
     description:
-      'Secure, compliant financial technology for institutions modernizing cores, channels, and customer journeys without sacrificing control.',
+      'Financial institutions modernizing cores and channels need screened specialists who can work inside regulated environments.',
     solution:
-      'Core banking support, mobile banking, payments workflows, and fraud detection systems.',
+      'Direct hire and contract talent for core banking, payments, security, and digital channels — plus consulting on modernization roadmaps.',
   },
   {
     id: 'it',
@@ -42,9 +42,9 @@ export const industries: Industry[] = [
     shortTitle: 'IT & SaaS',
     title: 'IT & Technology',
     description:
-      'We support product and platform teams with software delivery, DevOps automation, and cloud infrastructure so they can ship and scale faster.',
+      'Product and platform teams that need to ship faster without a six-month search for senior engineers.',
     solution:
-      'SaaS platforms, APIs, microservices architecture, and cloud-native applications.',
+      'Offshore delivery teams, staff augmentation, and RPO for engineering, DevOps, QA, and data roles.',
   },
   {
     id: 'ecommerce',
@@ -52,9 +52,9 @@ export const industries: Industry[] = [
     shortTitle: 'Retail',
     title: 'Ecommerce & Retail',
     description:
-      'Omnichannel storefronts, inventory systems, and analytics that help retail teams compete online and in-store.',
+      'Retail and ecommerce companies competing on experience need technology talent that can scale with seasonal hiring and new channels.',
     solution:
-      'Custom ecommerce platforms, inventory management, POS systems, and customer analytics.',
+      'Flexible staffing and recruiting capacity for ecommerce, inventory, and customer-facing platforms.',
   },
   {
     id: 'education',
@@ -62,9 +62,9 @@ export const industries: Industry[] = [
     shortTitle: 'Education',
     title: 'Education & Training',
     description:
-      'Learning platforms and student systems that make programs more accessible and easier to run day to day.',
+      'Institutions and training providers need reliable IT hiring without standing up a large internal recruiting bench.',
     solution:
-      'LMS platforms, virtual classrooms, student portals, and educational content tools.',
+      'Staffing and RPO for learning platforms, student systems, and campus technology teams.',
   },
   {
     id: 'manufacturing',
@@ -72,8 +72,8 @@ export const industries: Industry[] = [
     shortTitle: 'Logistics',
     title: 'Manufacturing & Logistics',
     description:
-      'Supply chain, warehouse, and tracking solutions that improve throughput and reduce operational waste.',
+      'Operations-heavy companies need IT people who understand ERP, supply chain, and plant-floor constraints.',
     solution:
-      'ERP integrations, supply chain optimization, warehouse management, and real-time tracking.',
+      'Contract, contract-to-hire, and consulting support for ERP, warehouse, and tracking systems.',
   },
 ];

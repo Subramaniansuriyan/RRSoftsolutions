@@ -6,7 +6,7 @@ import IndustriesExplorer from '@/components/IndustriesExplorer';
 export const metadata: Metadata = {
   title: 'Industries We Serve',
   description:
-    'RR Software Solutions provides technology solutions for healthcare, banking, IT, ecommerce, education, and manufacturing.',
+    'RR Software Solutions staffs and advises U.S. companies in healthcare, banking, IT, ecommerce, education, and manufacturing.',
 };
 
 export default function IndustriesPage() {
@@ -15,7 +15,7 @@ export default function IndustriesPage() {
       <PageHero
         eyebrow="Industries"
         title="Domain expertise that sharpens delivery"
-        description="Specialized technology and talent approaches for sectors where compliance, uptime, and customer experience are non-negotiable."
+        description="IT staffing, consulting, and RPO for sectors where hiring speed, compliance, and delivery matter."
         primaryCta={{ href: '/contact', label: 'Get in touch' }}
         secondaryCta={{ href: '/services', label: 'View services' }}
       />
@@ -28,8 +28,7 @@ export default function IndustriesPage() {
               Deep domain expertise
             </h2>
             <p className="text-lg text-navy-500 leading-relaxed">
-              Select an industry to see how we approach challenges and the solutions we typically
-              deliver.
+              Select an industry to see how we staff, advise, and run recruiting for that sector.
             </p>
           </div>
           <IndustriesExplorer />
@@ -39,7 +38,7 @@ export default function IndustriesPage() {
       <PageCta
         eyebrow="Not listed?"
         title="Your industry, our expertise"
-        description="Don't see your sector called out? We work across verticals. Let's discuss how software, cloud, RCM, or staffing can help."
+        description="Don't see your sector called out? We staff and advise across verticals. Let's discuss how IT staffing, consulting, or RPO can help."
         primaryCta={{ href: '/contact', label: 'Get in touch' }}
         secondaryCta={{ href: '/about', label: 'About us' }}
         variant="navy"

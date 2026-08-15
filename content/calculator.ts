@@ -18,7 +18,7 @@ export const calculatorRoles: CalculatorRole[] = [
   { id: 'data', label: 'Data / AI Engineer', traditionalHourly: 110 },
   { id: 'qa', label: 'QA Automation Engineer', traditionalHourly: 80 },
   { id: 'healthcare', label: 'Healthcare IT Specialist', traditionalHourly: 90 },
-  { id: 'rcm', label: 'RCM Specialist', traditionalHourly: 70 },
+  { id: 'cyber', label: 'Cybersecurity Engineer', traditionalHourly: 108 },
   { id: 'salesforce', label: 'Salesforce Developer', traditionalHourly: 100 },
   { id: 'mobile', label: 'Mobile App Developer', traditionalHourly: 95 },
 ];

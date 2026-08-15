@@ -7,7 +7,7 @@ import CareersInteractive from '@/components/CareersInteractive';
 export const metadata: Metadata = {
   title: 'Careers',
   description:
-    'Join RR Software Solutions. Explore career paths in engineering, cloud, QA, and consulting with a Houston-based technology team.',
+    'Join RR Software Solutions. Explore career paths in recruiting, consulting, and IT delivery with a Houston-based talent partner.',
 };
 
 export default function CareersPage() {
@@ -16,7 +16,7 @@ export default function CareersPage() {
       <PageHero
         eyebrow="Careers"
         title="Join a team that builds to scale"
-        description="Build products, support healthcare operations, and grow alongside experienced engineers and consultants—whether you join full-time or through our staffing network."
+        description="Join recruiters, consultants, and delivery leads who help U.S. companies hire and modernize — whether you join full-time or through our staffing network."
         primaryCta={{ href: '/contact', label: 'Get in touch' }}
         secondaryCta={{
           href: 'mailto:surya@rrsoftsolutions.net?subject=Career%20Opportunity',
@@ -56,8 +56,8 @@ export default function CareersPage() {
               everyone—from juniors to leads—to ask good questions.
             </p>
             <p>
-              Work ranges from greenfield products to stabilizing systems that already power real
-              businesses. You will see the impact of what you ship.
+              Work ranges from filling a single specialist role to running RPO through a hiring
+              surge. You will see the impact of the people you place and the roadmaps you shape.
             </p>
             <p>
               Diverse backgrounds strengthen our delivery. We welcome professionals who care about

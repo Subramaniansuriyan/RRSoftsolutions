@@ -8,7 +8,7 @@ import ContactForm from '@/components/ContactForm';
 export const metadata: Metadata = {
   title: 'Contact Us',
   description:
-    'Get in touch with RR Software Solutions. Based in Houston, TX — contact us for consultations, staffing, and project quotes.',
+    'Get in touch with RR Software Solutions. Based in Houston, TX — contact us for IT staffing, consulting, and RPO.',
 };
 
 const contactInfo = [
@@ -41,7 +41,7 @@ export default function ContactPage() {
       <PageHero
         eyebrow="Contact"
         title="Start a conversation"
-        description="Whether you need software delivery, cloud support, RCM help, or IT talent—reach our Houston team and we will respond within one business day."
+        description="Whether you need IT staffing, a technology roadmap, or RPO support — reach our Houston team and we will respond within one business day."
         primaryCta={{ href: 'mailto:surya@rrsoftsolutions.net', label: 'Email us' }}
         secondaryCta={{ href: '/services', label: 'View services' }}
       />

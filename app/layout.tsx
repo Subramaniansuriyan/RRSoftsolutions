@@ -23,13 +23,14 @@ export const metadata: Metadata = {
     template: "%s | RR Software Solutions",
   },
   description:
-    "Houston technology partner for custom software, IT consulting, cloud, healthcare RCM, and IT staffing. Build to scale.",
+    "IT staffing, IT consulting, and RPO for U.S. companies — from RR Software Solutions. Offshore delivery teams, direct hire, contract-to-hire, and managed recruiting.",
   keywords: [
-    "software development",
-    "IT consulting",
-    "cloud management",
-    "revenue cycle management",
     "IT staffing",
+    "IT consulting",
+    "RPO",
+    "recruitment process outsourcing",
+    "contract to hire",
+    "direct hire",
     "digital transformation",
   ],
   authors: [{ name: "RR Software Solutions" }],
@@ -42,7 +43,7 @@ export const metadata: Metadata = {
     siteName: "RR Software Solutions",
     title: "RR Software Solutions — Build to Scale",
     description:
-      "Software, cloud, healthcare revenue operations, and IT talent—built to scale from Houston.",
+      "IT staffing, IT consulting, and RPO for U.S. companies — from RR Software Solutions.",
     images: [
       {
         url: "/logo.png",
@@ -56,7 +57,7 @@ export const metadata: Metadata = {
     card: "summary_large_image",
     title: "RR Software Solutions — Build to Scale",
     description:
-      "Software, cloud, healthcare revenue operations, and IT talent—built to scale from Houston.",
+      "IT staffing, IT consulting, and RPO for U.S. companies — from RR Software Solutions.",
     images: ["/logo.png"],
   },
   robots: {

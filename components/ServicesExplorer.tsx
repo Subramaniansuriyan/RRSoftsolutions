@@ -33,7 +33,7 @@ export default function ServicesExplorer() {
                   <span className="font-display text-lg font-bold text-navy-900 block">
                     {offering.shortTitle}
                   </span>
-                  <span className="text-navy-500 text-sm sm:hidden mt-1 block">
+                  <span className="text-navy-500 text-sm mt-1 block">
                     {offering.shortDescription}
                   </span>
                 </span>
@@ -53,14 +53,9 @@ export default function ServicesExplorer() {
               >
                 <div className="overflow-hidden">
                   <div className="pb-7 sm:pl-[3rem] sm:ml-6 max-w-2xl">
-                    <p className="text-navy-500 leading-relaxed mb-3">
-                      {offering.shortDescription}
-                    </p>
-                    <p className="text-sm text-navy-600 leading-relaxed mb-4">
-                      {offering.benefit}
-                    </p>
+                    <p className="text-navy-500 leading-relaxed mb-4">{offering.description}</p>
                     <Link
-                      href="/services"
+                      href={`/services#${offering.id}`}
                       className="inline-flex items-center text-sm font-semibold text-navy-800 hover:text-navy-600 transition-colors"
                     >
                       Learn more
